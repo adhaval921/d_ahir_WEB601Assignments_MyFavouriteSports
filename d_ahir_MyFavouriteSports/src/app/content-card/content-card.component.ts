@@ -13,6 +13,9 @@ export class ContentCardComponent {
   constructor(){
 
   }
+  display_card(){
+    console.log("Id:-" + this.contentList?.id + "\n Game Name: " + this.contentList?.title );
+  }
   ngOnInit(): void{
 
   }

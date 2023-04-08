@@ -3,5 +3,12 @@
 <span [innerHTML]="sports.printProperties(1)"></span>
 <span [innerHTML]="sports.printProperties(2)"></span>
 <span [innerHTML]="sports.printProperties(3)"></span> -->
-<h2> {{ contentList?.title }}</h2>
-<div><img src="{{ contentList?.imgURL }}"></div>
+<div class="content-card">
+    
+<h2>{{ contentList?.id}}:- {{ contentList?.title }}</h2>
+<div><img class="img" *ngIf="contentList" [src]=' contentList? contentList.imgURL :""' (click)="display_card()" /></div>
+<p>{{ contentList?.description }}</p>
+<h6>--{{ contentList?.creator }}</h6>
+<h4>{{ contentList?.type }}</h4>
+<h4>{{ contentList?.tags }}</h4>
+</div>
