@@ -41,7 +41,7 @@ export class ContentListComponent {
           title: "Soccer",
           description: "Association football, more commonly known as football or soccer,[a] is a team sport played between two teams of 11 players who primarily use their feet to propel a ball around a rectangular field called a pitch. The objective of the game is to score more goals than the opposing team by moving the ball beyond the goal line into a rectangular-framed goal defended by the opposing team. Traditionally, the game has been played over two 45-minute halves, for a total match time of 90 minutes. With an estimated 250 million players active in over 200 countries and territories, it is considered the world's most popular sport.",
           creator: "ENGLAND",
-          imgURL: "https://en.wikipedia.org/wiki/Association_football#/media/File:Football_in_Bloomington,_Indiana,_1996.jpg",
+          imgURL: "",
           type: "OUTDOOR",
         },//5
         {
@@ -49,7 +49,7 @@ export class ContentListComponent {
           title: "Hockey",
           description: "Hockey is a term used to denote a family of various types of both summer and winter team sports which originated on either an outdoor field, sheet of ice, or dry floor such as in a gymnasium. While these sports vary in specific rules, numbers of players, apparel and, notably, playing surface, they share broad characteristics of two opposing teams using a stick to propel a ball or disk into a goal.",
           creator: "INDIA",
-          imgURL: "https://en.wikipedia.org/wiki/Hockey#/media/File:Field_hockey.jpg",
+          imgURL:'',
           type: "OUTDOOR",
         },//6
         {
