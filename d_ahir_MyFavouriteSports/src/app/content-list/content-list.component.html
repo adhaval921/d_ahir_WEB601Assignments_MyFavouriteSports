@@ -3,18 +3,29 @@
     <div class="inputBox" style="text-align: center;">
 
         <label>Enter sports Name: </label><input #authorName placeholder="Enter the sports Name">&nbsp;&nbsp;&nbsp;&nbsp;
-        <button click=""> Search sport Name</button><br>
-        <!-- <p *ngIf="message == 'Author Name found in the Movie list'" class="itemExist">Output value of input box: {{.value}} {{ message }}</p>
-        <p *ngIf="message == 'Author Name does not exist in the Movie list !'" class="noItem">Output value of input box: {{authorName.value}} {{ message }}</p> --> 
+        <button> Search sport Name</button><br>
+        <!-- <p *ngIf="message == 'Game is in the List!'" class="itemExist">Output value of input box: {{ NameValue.value }} {{ message }}</p>
+        <p *ngIf="message == 'Game is not found in List!'" class="noItem">Output value of input box: {{NameValue.value}} {{ message }}</p>  -->
     </div>
+    
 <h2 style="text-align: center;">List Of Indoor Games</h2>
-
-<app-content-card *ngFor=' let item of (contentList | typeEdit : "INDOOR") '[contentList]="item" class="typeOne"></app-content-card><br><br>
-
+<div class="indoor">
+<app-content-card   *ngFor=' let item of (contentList | typeEdit : "INDOOR") '[contentList]="item" class="typeOne"></app-content-card><br><br>
+</div>
 <h2>List of outdoor games</h2>
 
-<app-content-card *ngFor=' let item of (contentList| typeEdit : "OUTDOOR")'[contentList]="item" class="typeSecond"></app-content-card><br><br>
-
+<div class="outdoor">
+<app-content-card  *ngFor=' let item of (contentList| typeEdit : "OUTDOOR")'[contentList]="item" class="typeSecond"></app-content-card><br><br>
+</div>
 <h2>List of No Type</h2>
+<div class="noType">
 
-<app-content-card *ngFor="let item of (contentList | typeEdit:'')"  [contentList]="item" class="typeThird"></app-content-card>
+<app-content-card  *ngFor="let item of (contentList | typeEdit:'')"  [contentList]="item" class="typeThird"></app-content-card>
+</div>
+
+<!-- 
+<label>Enter Author Name: </label><input #authorName placeholder="Enter the Author Name">&nbsp;&nbsp;&nbsp;&nbsp;
+  <button (click)="searchAuthorName(authorName.value)">Search Author Name</button><br>
+  <p *ngIf="message == 'Author Name found in the Movie list'" class="itemExist">Output value of input box: {{authorName.value}} {{ message }}</p>
+  <p *ngIf="message == 'Author Name does not exist in the Movie list !'" class="noItem">Output value of input box: {{authorName.value}} {{ message }}</p>
+</div> -->

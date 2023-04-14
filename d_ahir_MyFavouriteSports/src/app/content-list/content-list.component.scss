@@ -1,0 +1,18 @@
+:host{
+    &.h2{
+     text-align: center;
+    }
+    div.indoor{
+    background-color: rgb(178, 56, 166);
+    color: yellow;
+    }
+    div.outdoor{
+        background-color: aquamarine;
+        color:blue;
+    }
+    div.noType{
+        background-color: burlywood;
+        color:brown;
+    }
+    
+}

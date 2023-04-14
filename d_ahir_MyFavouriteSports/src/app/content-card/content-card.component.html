@@ -1,16 +1,8 @@
-
-<span [innerHTML]="sports.printProperties(0)"></span>
-<span [innerHTML]="sports.printProperties(1)"></span>
-<span [innerHTML]="sports.printProperties(2)"></span>
-<<<<<<< Updated upstream
-<span [innerHTML]="sports.printProperties(3)"></span>
-=======
-<span [innerHTML]="sports.printProperties(3)"></span> -->
 <div class="content-card">
 
     <h2>{{ contentList?.id}}:- {{ contentList?.title }}</h2>
     <div class="img" *ngIf="contentList?.imgURL">
-        <img *ngIf="contentList" [src]=' contentList? contentList.imgURL :""' (click)="display_card()" [alt]="" style="height: 150px;"/>
+        <img class="one" *ngIf="contentList" [src]=' contentList? contentList.imgURL :""' (click)="display_card()" [alt]="" />
     </div>
     <p>{{ contentList?.description }}</p>
     <h6>Popular In:- {{ contentList?.creator }}</h6>
@@ -19,4 +11,3 @@
     </div>
     <h4>{{ contentList?.tags }}</h4>
 </div>
->>>>>>> Stashed changes
