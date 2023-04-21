@@ -7,14 +7,14 @@
         <!-- <p *ngIf="message == 'Author Name found in the Movie list'" class="itemExist">Output value of input box: {{.value}} {{ message }}</p>
         <p *ngIf="message == 'Author Name does not exist in the Movie list !'" class="noItem">Output value of input box: {{authorName.value}} {{ message }}</p> --> 
     </div>
-<h2 style="text-align: center;">List Of Indoor Games</h2>
+<h2 class="header1" style="text-align: center;">List Of Indoor Games</h2>
 
 <app-content-card *ngFor=' let item of (contentList | typeEdit : "INDOOR") '[contentList]="item" class="typeOne"></app-content-card><br><br>
 
-<h2>List of outdoor games</h2>
+<h2 class="header2">List of outdoor games</h2>
 
-<app-content-card *ngFor=' let item of (contentList| typeEdit : "OUTDOOR")'[contentList]="item" class="typeSecond"></app-content-card><br><br>
+<app-content-card *ngFor=' let item of (contentList| typeEdit : "OUTDOOR")'[contentList]="item" class="typeTwo"></app-content-card><br><br>
 
-<h2>List of No Type</h2>
+<h2 class="header3">List of No Type</h2>
 
-<app-content-card *ngFor="let item of (contentList | typeEdit:'')"  [contentList]="item" class="typeThird"></app-content-card>
+<app-content-card *ngFor="let item of (contentList | typeEdit:'')"  [contentList]="item" class="typeThree"></app-content-card>

@@ -1,22 +1,18 @@
 
-<span [innerHTML]="sports.printProperties(0)"></span>
+<!-- <span [innerHTML]="sports.printProperties(0)"></span>
 <span [innerHTML]="sports.printProperties(1)"></span>
 <span [innerHTML]="sports.printProperties(2)"></span>
-<<<<<<< Updated upstream
 <span [innerHTML]="sports.printProperties(3)"></span>
-=======
-<span [innerHTML]="sports.printProperties(3)"></span> -->
+<span [innerHTML]="sports.printProperties(3)"></span> --> 
 <div class="content-card">
 
     <h2>{{ contentList?.id}}:- {{ contentList?.title }}</h2>
-    <div class="img" *ngIf="contentList?.imgURL">
-        <img *ngIf="contentList" [src]=' contentList? contentList.imgURL :""' (click)="display_card()" [alt]="" style="height: 150px;"/>
-    </div>
+    <img class="img" *ngIf="contentList?.imgURL;else defaultImageURL" [src]='contentList?.imgURL' (click)="display_card()" [alt]="0" style="height: 150px;" />
+    <ng-template #defaultImageURL>
+        <img [src]="defaultImage" (click)="display_card()" />
+    </ng-template>
     <p>{{ contentList?.description }}</p>
     <h6>Popular In:- {{ contentList?.creator }}</h6>
-    <div class="type" *ngIf="contentList?.type">
-        <h4>type:- {{ contentList?.type }}</h4>
-    </div>
-    <h4>{{ contentList?.tags }}</h4>
+    <h4 *ngIf="contentList?.type" appHoverAffect [Hover-Affect]="'underline'">type:- {{ contentList?.type }}</h4>
+    <h4 *ngIf="contentList?.tags" appHoverAffect [Hover-Affect]="'bold'">{{ contentList?.tags }}</h4>
 </div>
->>>>>>> Stashed changes

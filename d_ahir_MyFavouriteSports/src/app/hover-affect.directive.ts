@@ -7,25 +7,22 @@ export class HoverAffectDirective {
 
   private isUnderLine: boolean = false; 
   private defaultUnderLine = ''
-  @Input() font = '';
-  constructor(private elm: ElementRef) {
-  this.defaultUnderLine = elm.nativeElement.style.font;
-   }
-@HostBinding('div.type') get getUnderLine(){
-  console.log('HostBinding: font',{
-font : this.isUnderLine ? this.font : 'none',
-  });
-  return this.isUnderLine ? this.font : 'none';
-}
+  @Input('Hover-Affect') affectStyle: string = 'underline';
+  constructor(private elm: ElementRef) {}   
 @HostListener('mouseenter') onMouseEnter(){
-  this.isUnderLine = true;
+if(this.affectStyle === 'underline'){
+  this.elm.nativeElement.style.textDecoration = this.affectStyle;
+}else if(this.affectStyle === 'bold'){
+this.elm.nativeElement.style.fontWeight = 'bold';
 }
-   
-@HostListener('mouseleave') onLeave(){
-  this.isUnderLine =false;
 }
-private highlight(font: boolean){
-  this.elm.nativeElement.style.font= font ? '3px underline' : 'none';
-}
+@HostListener('mouseleave') onMouseLeave(){
+  if(this.affectStyle === 'underline'){
+    this.elm.nativeElement.style.textDecoration = 'none';
+  }else if(this.affectStyle === 'bold'){
+  this.elm.nativeElement.style.fontWeight = 'normal';
+  }
+  }
+  
 
 }
