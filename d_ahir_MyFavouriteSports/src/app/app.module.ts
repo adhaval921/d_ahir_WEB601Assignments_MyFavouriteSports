@@ -3,27 +3,27 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { ContentCardComponent } from './content-card/content-card.component';
-<<<<<<< Updated upstream
-=======
+
 import { ContentListComponent } from './content-list/content-list.component';
 import { TypeEditPipe } from './type-edit.pipe';
->>>>>>> Stashed changes
+import { UpdateCheckerService } from './update-checker.service';
 
 @NgModule({
   declarations: [
     AppComponent,
-<<<<<<< Updated upstream
-    ContentCardComponent
-=======
+    ContentCardComponent,
     ContentCardComponent,
     ContentListComponent,
     TypeEditPipe
->>>>>>> Stashed changes
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    ServiceWorkerModule.register('service-worker.js',{enabled: Environment.production}),
+    MatSnackBarModule
   ],
-  providers: [],
+  providers: [
+    UpdateCheckerService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
